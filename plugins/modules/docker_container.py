@@ -850,7 +850,7 @@ author:
 
 requirements:
   - "L(Docker SDK for Python,https://docker-py.readthedocs.io/en/stable/) >= 1.8.0 (use L(docker-py,https://pypi.org/project/docker-py/) for Python 2.6)"
-  - "Docker API >= 1.20"
+  - "Docker API >= 1.19"
 '''
 
 EXAMPLES = '''
@@ -3510,7 +3510,7 @@ def main():
         argument_spec=argument_spec,
         required_if=required_if,
         supports_check_mode=True,
-        min_docker_api_version='1.20',
+        min_docker_api_version='1.19',
     )
     if client.module.params['networks_cli_compatible'] is True and client.module.params['networks'] and client.module.params['network_mode'] is None:
         client.module.deprecate(
